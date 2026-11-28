@@ -501,16 +501,3 @@ footer p:last-child { text-align: right; }
   .announce-info dl div { grid-template-columns: 1fr; gap: .2rem; }
 }
 
-.announce-card { grid-template-columns: minmax(220px, .7fr) minmax(0, 1.1fr) minmax(280px, .9fr); }
-.announce-poster { margin: 0; }
-.announce-poster-open { display: block; width: 100%; padding: 0; border: 1px solid rgba(255,255,255,.2); background: transparent; cursor: zoom-in; }
-.announce-poster img { width: 100%; height: auto; box-shadow: 0 18px 40px -18px rgba(0,0,0,.7); }
-.announce-poster figcaption { margin-top: .6rem; color: rgba(255,253,248,.6); font-size: .78rem; letter-spacing: .08em; text-align: center; }
-@media (max-width: 1200px) {
-  .announce-card { grid-template-columns: minmax(200px, .8fr) minmax(0, 1.2fr); }
-  .announce-info { grid-column: 1 / -1; }
-}
-@media (max-width: 700px) {
-  .announce-card { grid-template-columns: 1fr; }
-  .announce-poster { max-width: 420px; margin: 0 auto; }
-}
