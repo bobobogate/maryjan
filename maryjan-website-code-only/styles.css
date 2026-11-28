@@ -455,3 +455,48 @@ footer p:last-child { text-align: right; }
   .article-reader-footer { flex-direction: column; text-align: center; }
   .lightbox { width: 95vw; }
 }
+
+/* 首頁最上方：最新課程公告 */
+.announce {
+  position: relative; overflow: hidden;
+  padding: 122px clamp(1.25rem, 6vw, 7.5rem) 8px;
+  color: var(--white);
+  background:
+    linear-gradient(180deg, rgba(6,31,48,.94) 0%, rgba(6,31,48,.86) 55%, var(--ink-deep) 100%),
+    url("home.jpg") center 30% / cover no-repeat, var(--ink-deep);
+}
+.announce + .hero { padding-top: 64px; }
+.announce-card {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr); gap: clamp(2rem, 4vw, 4rem);
+  padding: clamp(1.6rem, 3.5vw, 3rem);
+  border: 1px solid rgba(245,183,27,.55);
+  background: rgba(11,49,72,.72);
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,.6);
+}
+.announce-tag { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; margin: 0 0 1.2rem; color: var(--aqua); font-size: .8rem; font-weight: 700; letter-spacing: .14em; }
+.announce-tag span { padding: .25rem .7rem; color: var(--ink-deep); background: var(--sun); letter-spacing: .1em; }
+.announce h2 { margin: 0 0 1.4rem; font-family: var(--serif); font-weight: 600; font-size: clamp(2.1rem, 4vw, 3.4rem); line-height: 1.2; letter-spacing: .02em; }
+.announce h2 em { display: inline-block; color: var(--sun); font-style: normal; }
+.announce-copy p { margin: 0 0 1rem; color: rgba(255,253,248,.82); }
+.announce-copy .announce-quote { margin-top: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--sun); color: var(--white); font-family: var(--serif); font-size: 1.12rem; line-height: 1.7; }
+.announce-info { display: flex; flex-direction: column; gap: 1.2rem; padding: clamp(1.2rem, 2.5vw, 1.8rem); background: rgba(255,253,248,.07); border: 1px solid rgba(255,255,255,.14); }
+.announce-teacher { display: flex; align-items: center; gap: 1rem; }
+.announce-teacher img { width: 72px; height: 72px; object-fit: cover; border-radius: 50%; border: 2px solid var(--sun); }
+.announce-teacher p { margin: 0; display: flex; flex-direction: column; line-height: 1.4; }
+.announce-teacher small { color: var(--aqua); font-size: .75rem; letter-spacing: .12em; }
+.announce-teacher strong { font-family: var(--serif); font-size: 1.3rem; letter-spacing: .06em; }
+.announce-info dl { margin: 0; display: grid; gap: .85rem; }
+.announce-info dl div { display: grid; grid-template-columns: 5rem 1fr; gap: .8rem; padding-top: .85rem; border-top: 1px solid rgba(255,255,255,.14); }
+.announce-info dt { color: var(--sun); font-size: .85rem; font-weight: 700; letter-spacing: .08em; }
+.announce-info dd { margin: 0; color: rgba(255,253,248,.9); font-size: .95rem; line-height: 1.6; }
+.announce-button { justify-content: center; gap: 1rem; margin-top: auto; font-size: 1.05rem; padding: 1rem 1.15rem; }
+@media (max-width: 1050px) {
+  .announce { padding-top: 104px; }
+  .announce-card { grid-template-columns: 1fr; }
+  .announce + .hero { padding-top: 56px; }
+}
+@media (max-width: 600px) {
+  .announce-card { padding: 1.4rem 1.15rem; }
+  .announce-info dl div { grid-template-columns: 1fr; gap: .2rem; }
+}
